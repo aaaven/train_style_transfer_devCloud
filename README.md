@@ -32,7 +32,13 @@ conda env create -f environment.yml
 ```bash
 source activate styletransferml5
 ```
-* conda env titled styletransferml5 should be activated if everything went right. And the environment is ready, terminate current terminal window.
+* conda env titled styletransferml5 should be activated if everything went right.
+
+- Download Dataset
+```bash
+sh setup.sh
+```
+This could take a while (download 14 GB COCO dataset) based on the internet condition. Once the download is ready, you can terminate current terminal window.
 
 ### 4) Select, upload a style image and modify run.sh
 

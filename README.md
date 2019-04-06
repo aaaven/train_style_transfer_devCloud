@@ -34,7 +34,7 @@ source activate styletransferml5
 ```
 * conda env titled styletransferml5 should be activated if everything went right. And the environment is ready, terminate current terminal window.
 
-### 4) Select, upload a style image and modify code
+### 4) Select, upload a style image and modify run.sh
 
 - Put the image you want to train the style on, in the `/images` folder;
 * open a new terminal window on your computer and use following command to transfer image.
@@ -44,14 +44,8 @@ cd YOURIMAGE_path
 scp YOURIMAGE_name colfax:train_style_transfer_devCloud/images
 ```
 
-* Log in log-in-node and Modify run.sh
 
-```bash
-ssh colfax
-vim train_style_transfer_devCloud/run.sh
-```
-Change the code to:
-
+* create **run.sh** with copy paste in following code and save, remember change the **YOURIMAGE.jpg** to the image name you upload to colfax and pay attention to the file format.
 ```bash
 python style.py --style images/YOURIMAGE.jpg \
   --checkpoint-dir checkpoints/ \
@@ -63,24 +57,43 @@ python style.py --style images/YOURIMAGE.jpg \
   --batch-size 32
 ```
 
+upload run.sh to colfax:
+
+```bash
+cd path_to_runsh
+scp run.sh colfax:train_style_transfer_devCloud/
+```
+
 * You can learn more about how to use all the parameters for training in the on the original repository for this code [here](https://github.com/lengstrom/fast-style-transfer#documentation) and [here](https://github.com/lengstrom/fast-style-transfer/blob/master/docs.md).
 
 
-### 6) Start the training
+### 6) Log in log-in-node and Start the training
+- Log in log-in-node
+
+```bash
+ssh colfax
+```
+
 - Use qsub command to summit the training task
 
 ```bash
-cp train_style_transfer_devCloud/train.sh .
+cp train_style_transfer_devCloud/train.sh train.sh
 qsub -l walltime=24:00:00 -k oe train.sh
 ```
 
-- If the training task is summited, you will find two files in your current home directory - **train.sh.e1234** and **train.sh.o1234** - use **view** or **tail** command to check.
+- If the training task is summited, you will find two files in your current home directory - **train.sh.e1234** and **train.sh.o1234** - use **view** or **tail** command to check. With command:
 
 ```bash
-tail train.sh.01234
+view train.sh.e1234
 ```
 
-And you should see something like this:
+you should see nothing because this suppose to be the error log.  And with command:
+
+```bash
+tail train.sh.o1234
+```
+
+you should see something like this:
 
 ```
 ml5.js Style Transfer Training!

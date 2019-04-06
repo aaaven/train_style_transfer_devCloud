@@ -1,6 +1,6 @@
 # Train ml5 style transfer model with INTEL devCloud
 
-This repository contains a slightly modified version of [ml5/training-styletransfer](https://github.com/ml5js/training-styletransfer). Since [INTEL devCloud]() is cpu based, there are some tweaks on the code as well as special environment setup. This approach is prepared for Interactive Machine Learning Class taught at NYU Shanghai, spring 2019. [Class website](https://wp.nyu.edu/shanghai-ima-interactivemachinelearning/),[Code repo](https://github.com/imachines/IMA-Interactive-Machine-Learning).
+This repository contains a slightly modified version of [ml5/training-styletransfer](https://github.com/ml5js/training-styletransfer). Since [INTEL devCloud]() is cpu based, there are some tweaks on the code as well as special environment setup. This approach is prepared for Interactive Machine Learning Class taught at NYU Shanghai, spring 2019. [Class website](https://wp.nyu.edu/shanghai-ima-interactivemachinelearning/) + [Code repo](https://github.com/imachines/IMA-Interactive-Machine-Learning).
 
 ## Step-by-step Guide on DevCloud
 ### 1) Log in INTEL DevCloud
@@ -73,8 +73,8 @@ scp run.sh colfax:train_style_transfer_devCloud/
 * You can learn more about how to use all the parameters for training in the on the original repository for this code [here](https://github.com/lengstrom/fast-style-transfer#documentation) and [here](https://github.com/lengstrom/fast-style-transfer/blob/master/docs.md).
 
 
-### 6) Log in log-in-node and Start the training
-- Log in log-in-node
+### 5) Log in log-in-node and Start the training
+- Log in log-in-node with a new termial window
 
 ```bash
 ssh colfax

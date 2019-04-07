@@ -71,7 +71,7 @@ upload train.sh to colfax:
 
 ```bash
 cd path_to_trainsh
-scp run.sh colfax:train_style_transfer_devCloud/
+scp train.sh colfax:train_style_transfer_devCloud/
 ```
 
 * You can learn more about how to use all the parameters for training in the on the original repository for this code [here](https://github.com/lengstrom/fast-style-transfer#documentation) and [here](https://github.com/lengstrom/fast-style-transfer/blob/master/docs.md).

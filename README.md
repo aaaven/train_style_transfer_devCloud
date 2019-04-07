@@ -126,3 +126,5 @@ You will just need to point to it in your ml5 sketch:
 ```javascript
 let style = new ml5.styleTransfer('./models/your_new_style_name');
 ```
+
+You can also find a example here: [Inference style transfer model with ml5js](https://github.com/aaaven/inference_style_transfer_ml5)

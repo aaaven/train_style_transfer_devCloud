@@ -51,8 +51,12 @@ scp YOURIMAGE_name colfax:train_style_transfer_devCloud/images
 ```
 
 
-* create **run.sh** with copy paste in following code and save, remember change the **YOURIMAGE.jpg** to the image name you upload to colfax and pay attention to the file format.
+* create **train.sh** with copy paste in following code and save, remember change the **YOURIMAGE.jpg**  to the image name you upload to colfax (pay attention to the file format) and change **u24235** to your intel ID.
 ```bash
+source activate styletransferml5
+cd /home/u24235/training_styletransfer/
+
+export PYTHONUNBUFFERED=0
 python style.py --style images/YOURIMAGE.jpg \
   --checkpoint-dir checkpoints/ \
   --model-dir models/ \
@@ -63,10 +67,10 @@ python style.py --style images/YOURIMAGE.jpg \
   --batch-size 32
 ```
 
-upload run.sh to colfax:
+upload train.sh to colfax:
 
 ```bash
-cd path_to_runsh
+cd path_to_trainsh
 scp run.sh colfax:train_style_transfer_devCloud/
 ```
 
@@ -83,7 +87,6 @@ ssh colfax
 - Use qsub command to summit the training task
 
 ```bash
-cp train_style_transfer_devCloud/train.sh train.sh
 qsub -l walltime=24:00:00 -k oe train.sh
 ```
 

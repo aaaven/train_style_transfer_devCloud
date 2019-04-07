@@ -2,7 +2,7 @@
 
 This repository contains a slightly modified version of [ml5/training-styletransfer](https://github.com/ml5js/training-styletransfer). Since [INTEL devCloud](https://software.intel.com/en-us/ai/devcloud) is cpu based, there are some tweaks on the code as well as special environment setup. This approach is prepared for Interactive Machine Learning Class taught at NYU Shanghai, spring 2019. [Class website](https://wp.nyu.edu/shanghai-ima-interactivemachinelearning/) + [Code repo](https://github.com/imachines/IMA-Interactive-Machine-Learning).
 
-* [INTEL DevCloud](https://software.intel.com/en-us/ai/devcloud) provides free access to everyone! So everyone can try your own neural style transfer with this repo!
+* [INTEL DevCloud](https://software.intel.com/en-us/ai/devcloud) provides free access to everyone! So everyone can try your own neural style transfer with this repo! This training will take around 20 hours on the devCloud.
 
 ## Step-by-step Guide on DevCloud
 ### 1) Log in INTEL DevCloud

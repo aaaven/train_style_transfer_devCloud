@@ -14,7 +14,7 @@ ssh colfax
 ### 2) Clone this Project
 
 ```bash
-git clone
+git clone https://github.com/aaaven/train_style_transfer_devCloud
 ```
 
 ### 3) Log in Compute Node and Setup Environment
@@ -56,7 +56,7 @@ scp YOURIMAGE_name colfax:train_style_transfer_devCloud/images
 * create **train.sh** with copy paste in following code and save, remember change the **YOURIMAGE.jpg**  to the image name you upload to colfax (pay attention to the file format) and change **u24235** to your intel ID.
 ```bash
 source activate styletransferml5
-cd /home/u24235/training_styletransfer/
+cd /home/u24235/training_styletransfer_devCloud/
 
 export PYTHONUNBUFFERED=0
 python style.py --style images/YOURIMAGE.jpg \

@@ -21,7 +21,7 @@ git clone
 - Log in Compute Node
 
 ```bash
-qsub -l waltime=24:00:00 -I
+qsub -l walltime=24:00:00 -I
 ```
 - Set up environment with conda and environment.yml:
 
@@ -42,7 +42,7 @@ sh setup.sh
 ```
 This could take a while (download 14 GB COCO dataset) based on the internet condition. Once the download is ready, you can terminate current terminal window.
 
-### 4) Select, upload a style image and modify run.sh
+### 4) Select, upload a style image and train.sh
 
 - Put the image you want to train the style on, in the `/images` folder;
 * open a new terminal window on your computer and use following command to transfer image.
@@ -73,7 +73,7 @@ upload train.sh to colfax:
 
 ```bash
 cd path_to_trainsh
-scp train.sh colfax:train_style_transfer_devCloud/
+scp train.sh colfax:
 ```
 
 * You can learn more about how to use all the parameters for training in the on the original repository for this code [here](https://github.com/lengstrom/fast-style-transfer#documentation) and [here](https://github.com/lengstrom/fast-style-transfer/blob/master/docs.md).
@@ -115,7 +115,7 @@ Train set has been trimmed slightly..
 UID: 56
 ```
 
-### 7) Use it!
+### 6) Use it!
 
 Once the model is ready, your model will be in the `models/` folder. Use scp command to copy it to your local computer.(open a new terminal)
 

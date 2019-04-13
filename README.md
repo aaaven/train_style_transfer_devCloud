@@ -1,4 +1,4 @@
-# Train ml5 style transfer model with INTEL devCloud
+# Train ml5 style transfer model with INTEL devCloud [中文版](README_cn.md)
 
 This repository contains a slightly modified version of [ml5/training-styletransfer](https://github.com/ml5js/training-styletransfer). Since [INTEL devCloud](https://software.intel.com/en-us/ai/devcloud) is cpu based, there are some tweaks on the code as well as special environment setup. This approach is prepared for Interactive Machine Learning Class taught at NYU Shanghai, spring 2019. [Class website](https://wp.nyu.edu/shanghai-ima-interactivemachinelearning/) + [Code repo](https://github.com/imachines/IMA-Interactive-Machine-Learning).
 
